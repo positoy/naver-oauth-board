@@ -11,10 +11,17 @@ import org.springframework.web.bind.annotation.RestController;
 public class BoardController {
 
     final static Logger logger = LoggerFactory.getLogger(BoardController.class);
+
+    @GetMapping("/login/naver")
+    @ResponseBody
+    public String loginNaver(@RequestParam(defaultValue="") String code) {
+        logger.info("code : " + code);
+        return "redirect:/board";
+    }
+
     @GetMapping("/board")
     @ResponseBody
     public String getBoard(@RequestParam(defaultValue="") String code) {
-        logger.info("authcode : " + code);
         return "Hello World!";
     }
 }

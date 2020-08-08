@@ -10,7 +10,7 @@ const naverOauthLoginURL = (function () {
         response_type: 'code',
         client_id: 'AlS3TCLxJYn7SNPp75LE',
         redirect_uri:
-            'http://ec2-13-209-47-82.ap-northeast-2.compute.amazonaws.com:8080/board',
+            'http://ec2-13-209-47-82.ap-northeast-2.compute.amazonaws.com:8080/login/naver',
         state: 'hello',
     };
 
